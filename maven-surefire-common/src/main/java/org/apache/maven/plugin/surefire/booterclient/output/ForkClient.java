@@ -88,11 +88,11 @@ public class ForkClient
 
     private final DefaultReporterFactory defaultReporterFactory;
 
-    private final Map<String, String> testVmSystemProperties = new ConcurrentHashMap<String, String>();
+    private final Map<String, String> testVmSystemProperties = new ConcurrentHashMap<>();
 
     private final NotifiableTestStream notifiableTestStream;
 
-    private final Queue<String> testsInProgress = new ConcurrentLinkedQueue<String>();
+    private final Queue<String> testsInProgress = new ConcurrentLinkedQueue<>();
 
     /**
      * {@code testSetStartedAt} is set to non-zero after received
@@ -389,7 +389,7 @@ public class ForkClient
 
     private TestSetReportEntry createReportEntry( String untokenized )
     {
-        return createReportEntry( untokenized, Collections.<String, String>emptyMap() );
+        return createReportEntry( untokenized, Collections.emptyMap() );
     }
 
     private TestSetReportEntry createReportEntry( String untokenized, Map<String, String> systemProperties )
