@@ -57,7 +57,7 @@ public class DependencyScanner
     public DefaultScanResult scan()
         throws MojoExecutionException
     {
-        Set<String> classes = new LinkedHashSet<String>();
+        Set<String> classes = new LinkedHashSet<>();
         for ( File artifact : dependenciesToScan )
         {
             try
@@ -69,7 +69,7 @@ public class DependencyScanner
                 throw new MojoExecutionException( "Could not scan dependency " + artifact.toString(), e );
             }
         }
-        return new DefaultScanResult( new ArrayList<String>( classes ) );
+        return new DefaultScanResult( new ArrayList<>( classes ) );
     }
 
     private static void scanArtifact( File artifact, TestFilter<String, String> filter, Set<String> classes )
@@ -102,7 +102,7 @@ public class DependencyScanner
 
     public static List<File> filter( List<Artifact> artifacts, List<String> groupArtifactIds )
     {
-        List<File> matches = new ArrayList<File>();
+        List<File> matches = new ArrayList<>();
         if ( groupArtifactIds == null || artifacts == null )
         {
             return matches;

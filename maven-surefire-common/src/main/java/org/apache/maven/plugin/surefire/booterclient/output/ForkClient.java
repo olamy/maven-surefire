@@ -389,7 +389,7 @@ public class ForkClient
 
     private TestSetReportEntry createReportEntry( String untokenized )
     {
-        return createReportEntry( untokenized, Collections.emptyMap() );
+        return createReportEntry( untokenized, Collections.<String, String>emptyMap() );
     }
 
     private TestSetReportEntry createReportEntry( String untokenized, Map<String, String> systemProperties )
