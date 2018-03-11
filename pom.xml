@@ -99,6 +99,7 @@
     <jdk.home>${java.home}/..</jdk.home>
     <maven.compiler.testSource>1.7</maven.compiler.testSource>
     <maven.compiler.testTarget>1.7</maven.compiler.testTarget>
+    <javaVersion>7</javaVersion>
     <jvm.args.tests>-server -XX:+UseG1GC -Xms128m -Xmx144m -XX:+TieredCompilation -XX:TieredStopAtLevel=1 -XX:SoftRefLRUPolicyMSPerMB=50 -Djava.awt.headless=true</jvm.args.tests>
   </properties>
 
